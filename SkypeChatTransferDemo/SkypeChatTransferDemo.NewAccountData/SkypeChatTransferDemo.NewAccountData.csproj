@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4FD5E6C0-02E9-4E99-A335-41E473DF8525}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SkypeChatTransferDemo.NewAccountData</RootNamespace>
+    <AssemblyName>SkypeChatTransferDemo.NewAccountData</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.104.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.104.0\lib\net45\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.104.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.104.0\lib\net45\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.104.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.104.0\lib\net45\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Alert.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppSchemaVersion.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Call.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CallHandler.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CallMember.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Chat.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChatMember.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContactGroup.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContentSharing.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Conversation.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ConversationView.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataChannel.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DbMeta.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LegacyMessage.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MediaDocument.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Message.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MessageAnnotation.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewAccountData.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewAccountData.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewAccountData.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewAccountData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewAccountData.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Participant.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SMS.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tracker_journal.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Transfer.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Translator.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Video.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VideoMessage.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Voicemail.cs">
+      <DependentUpon>NewAccountData.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="NewAccountData.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NewAccountData.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="NewAccountData.edmx.diagram">
+      <DependentUpon>NewAccountData.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NewAccountData.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NewAccountData.edmx</DependentUpon>
+      <LastGenOutput>NewAccountData.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="NewAccountData.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NewAccountData.edmx</DependentUpon>
+      <LastGenOutput>NewAccountData.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.104.0\build\net45\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.104.0\build\net45\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.104.0\build\net45\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.104.0\build\net45\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
